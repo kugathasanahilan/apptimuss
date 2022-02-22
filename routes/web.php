@@ -16,7 +16,7 @@ Route::resource('customers', CustomerController::class)->middleware('auth');
 
 
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('customer.create');
 })->middleware(['auth']);
 
