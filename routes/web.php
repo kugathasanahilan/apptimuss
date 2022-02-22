@@ -12,13 +12,13 @@ use App\Http\Controllers\CustomerController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('customers', CustomerController::class)->middleware('auth');
+Route::resource('customers', CustomerController::class);
 
 
 
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     return view('customer.create');
-})->middleware(['auth']);
+});
 
 require __DIR__.'/auth.php';
 
